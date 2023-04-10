@@ -55,7 +55,7 @@ declare global {
       assertions(expected: number): void
       hasAssertions(): void
       anything(): any
-      any(constructor: unknown): any
+      any<T>(constructor: new() => T): T;
       addSnapshotSerializer(plugin: PrettyFormatPlugin): void
       getState(): MatcherState
       setState(state: Partial<MatcherState>): void
